@@ -4,6 +4,7 @@ This application provides a visual tool for creating delivery routes. It is inte
 
 ## Demo
 Video explanation can be found at the following link: https://www.youtube.com/watch?v=Rr6owOjFndk
+
 The application can be accessed online at the following link: https://vturkovic-geo-path.herokuapp.com/
 
 ## How to setup 
