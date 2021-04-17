@@ -16,7 +16,7 @@ const sendConfirmationEmail = (email, name, token) => {
     <body>
       <p>
       Dear ${name}, welcome to GeoPath, please follow this
-      <a href="http://localhost:3000/confirmation/${token}" target="_blank">link</a>
+      <a href="https://vturkovic-geo-path.herokuapp.com/confirmation/${token}" target="_blank">link</a>
       to confirm your account!
       </p>
     </body>
