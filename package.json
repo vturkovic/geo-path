@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/app.js",
+    "start": "src/app.js",
     "dev": "env-cmd -f ./config/dev.env nodemon src/app.js"
   },
   "author": "vladimir turkovic",
