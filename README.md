@@ -2,6 +2,10 @@
 
 This application provides a visual tool for creating delivery routes. It is intended for delivery company managers who create and manage the routes of their drivers. The app also allows you to place orders. Geolocation data was collected and executed using the Google API service.
 
+## Demo
+Video explanation can be found at the following link: https://www.youtube.com/watch?v=Rr6owOjFndk
+The application can be accessed online at the following link: https://vturkovic-geo-path.herokuapp.com/
+
 ## How to setup 
 
 1. Create a Google API key and an OpenweatherMap API key.
