@@ -24,7 +24,7 @@ function getWeatherGeolocation(){
     let lat = position.coords.latitude 
     let lng = position.coords.longitude;
 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=0a4b1747479d780a7a2e06d65c3a1c40&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=0a4b1747479d780a7a2e06d65c3a1c40&units=metric`)
     .then(response => response.text())
     .then(result => {
       
