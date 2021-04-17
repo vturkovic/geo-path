@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Register - Geo App</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/fonts/fontawesome5-overrides.min.css"
+    />
+  </head>
+
+  <body
+    class="bg-gradient-primary"
+    style="background: linear-gradient(#123c4e, rgb(0, 0, 0))"
+  >
+  
+  
+  <div class="popup" style="background-color: rgb(230, 230, 230);" id="popup">
+
+    <div class="popup-header">
+        <div class="title" style="left: 40px;">Confirmation link was sent to your mail</div>
+        <button class="close-button" id="close-button">&times;</button>
+    </div>
+
+    <div class="popup-body">
+
+      <form class="user">
+        <button
+                class="btn btn-primary btn-block text-white btn-user"
+                id="button_continue"
+                type="submit"
+                style="
+                  width: 100px;
+                  position: relative;
+                  left: 39%;
+                  background: linear-gradient(
+                    -131deg,
+                    #123c4e,
+                    rgb(111, 111, 111)
+                  );
+                  border-style: none;
+                "
+              >
+                Continue
+              </button>
+      </form>
+  
+      <!-- <hr />      -->
+    </div>
+  </div>
+
+  
+
+    <div class="container">
+      <div class="card shadow-lg o-hidden border-0 my-5">
+        <div class="card-body p-0">
+          <div class="row">
+            <div class="col-lg-5 d-none d-lg-flex">
+              <img src="/assets/img/image2.png" style="height: 753px" />
+            </div>
+            <div class="col-lg-7">
+              <div class="p-5">
+                <div class="text-center">
+                  <h4 class="text-white mb-4">Create an Account!</h4>
+                  <h4 class="text-dark mb-4">Create an Account!</h4>
+                </div>
+
+
+                <form class="user">
+                  <div class="form-group row">
+                    
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input
+                        class="form-control form-control-user"
+                        type="text"
+                        id="exampleFirstName"
+                        placeholder="First Name"
+                        name="first_name"
+                      />
+                      <div class="validationIconPosition" id="firstNameIcon">
+                        <!-- <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i> -->
+                      </div>
+                      <div class="validationSmallText">
+                        <small>Error message</small>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <input
+                        class="form-control form-control-user"
+                        type="text"
+                        id="exampleLastName"
+                        placeholder="Last Name"
+                        name="last_name"
+                      />
+                      <div class="validationIconPosition" id="lastNameIcon">
+
+                      </div>
+                      <div class="validationSmallText">
+                        <small>Error message</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      class="form-control form-control-user"
+                      type="email"
+                      id="exampleInputEmail"
+                      aria-describedby="emailHelp"
+                      placeholder="Email Address"
+                      name="email"
+                    />
+                    <div class="validationIconEmailPosition" id="emailIcon">
+
+                    </div>
+                    <div class="validationSmallTextEmail">
+                      <small>Error message</small>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input
+                        class="form-control form-control-user"
+                        type="password"
+                        id="examplePasswordInput"
+                        placeholder="Password"
+                        name="password"
+                      />
+                      <div class="validationIconPosition" id="passwordIcon">
+
+                      </div>
+                      <div class="validationSmallText">
+                        <small>Error message</small>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <input
+                        class="form-control form-control-user"
+                        type="password"
+                        id="exampleRepeatPasswordInput"
+                        placeholder="Repeat Password"
+                        name="password_repeat"
+                      />
+                      <div
+                        class="validationIconPosition"
+                        id="passwordRepeatIcon"
+                      >
+
+                      </div>
+                      <div class="validationSmallText">
+                        <small>Error message</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="position: relative; margin-top: 20px; margin-bottom: 20px; left: 117px;" id="my_captcha_form">
+                    <div class="g-recaptcha" 
+                      data-sitekey="6LeKc1EaAAAAAKnHpjyFPNtcQcI3i15WPuTCatQd" 
+                      ></div>
+                  </div>
+                  <button
+                    class="btn btn-primary btn-block text-white btn-user"
+                    type="submit"
+                    style="
+                      background: linear-gradient(
+                        -131deg,
+                        #123c4e,
+                        rgb(111, 111, 111)
+                      );
+                      border-style: none;
+                    "
+                  >
+                    Register Account
+                  </button>
+                  <hr />
+                </form>
+                <div class="text-center">
+                  <a
+                    class="small"
+                    href="/forgot-password.html"
+                    style="color: #1b7aa3"
+                    >Forgot Password?</a
+                  >
+                </div>
+                <div class="text-center">
+                  <a class="small" href="/index.html" style="color: #1b7aa3"
+                    >Already have an account? Login!</a
+                  >
+                  <h4 class="text-white mb-4">Create an Account!</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="/assets/js/script.min.js"></script>
+    <script src="/scripts/register.js"></script>
+  </body>
+</html>

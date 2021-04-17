@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Login - Geo App</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/fonts/fontawesome5-overrides.min.css"
+    />
+  </head>
+
+  <body
+    class="bg-gradient-primary"
+    style="background: linear-gradient(#123c4e, rgb(0, 0, 0))"
+  >
+
+  <div class="popup" style="background-color: rgb(230, 230, 230);" id="popup">
+
+    <div class="popup-header">
+        <div class="title" style="left: 4px; color:  rgb(185, 26, 26);">
+          Wrong email or password / Confirm your account</div>
+        <!-- <button class="close-button" type="submit" style="cursor: pointer;" id="close-button">&times;</button> -->
+    </div>
+
+    <div class="popup-body">
+
+      <form class="user">
+        <button
+                class="btn btn-primary btn-block text-white btn-user"
+                id="button_continue"
+                
+                style="
+                  width: 100px;
+                  position: relative;
+                  left: 39%;
+                  background: linear-gradient(
+                    -131deg,
+                    #e01313,
+                    rgb(111, 111, 111)
+                  );
+                  border-style: none;
+                "
+              >
+                Try again
+              </button>
+      </form>
+  
+      <!-- <hr />      -->
+    </div>
+  </div>
+
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-9 col-lg-12 col-xl-10">
+          <div class="card shadow-lg o-hidden border-0 my-5">
+            <div class="card-body p-0">
+              <div class="row">
+                <div class="col-lg-6 d-none d-lg-flex">
+                  <img src="/assets/img/image1.png" style="height: 709px" />
+                </div>
+                <div class="col-lg-6">
+                  <div class="p-5">
+                    <div class="text-center">
+                      <h4 class="text-white mb-4">Welcome Back!</h4>
+                      <h4 class="text-dark mb-4">Welcome to GeoPath!</h4>
+                    </div>
+                    <form class="user">
+                      <div class="form-group">
+                        <input
+                          class="form-control form-control-user"
+                          type="email"
+                          id="exampleInputEmail"
+                          aria-describedby="emailHelp"
+                          placeholder="Email Address"
+                          name="email"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <input
+                          class="form-control form-control-user"
+                          type="password"
+                          id="exampleInputPassword"
+                          placeholder="Password"
+                          name="password"
+                        />
+                      </div>
+                      <button
+                        class="btn btn-primary btn-block text-white btn-user"
+                        type="submit"
+                        id="login_button"
+                        style="
+                          background: linear-gradient(
+                            -132deg,
+                            #123c4e,
+                            rgb(111, 111, 111)
+                          );
+                          border-style: none;
+                        "
+                      >
+                        Login
+                      </button>
+                      <hr />
+                    </form>
+                    <div class="text-center">
+                      <a
+                        class="small"
+                        href="/forgot-password.html"
+                        style="color: #1b7aa3"
+                        >Forgot Password?</a
+                      >
+                    </div>
+                    <div class="text-center">
+                      <a
+                        class="small"
+                        href="/register.html"
+                        style="color: rgb(27, 122, 163)"
+                        >Create an Account!</a
+                      >
+                    </div>
+                    
+                    <h4 class="text-center text-white mb-4">Welcome Back!</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="/assets/js/script.min.js"></script>
+    <script src="/scripts/login.js"></script>
+  </body>
+</html>

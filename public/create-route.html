@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>Create Route - Geo Path</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" />
+    <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css" />
+  </head>
+
+  <body id="page-top">
+
+    <div class="popup" id="popup">
+
+      <div class="popup-header">
+          <div class="title">Choose one of the following</div>
+          <!-- <button class="close-button">&times;</button> -->
+      </div>
+
+      <div class="popup-body">
+          
+
+          <form class="user">
+          <button
+              class="btn btn-primary btn-block text-white btn-user"
+              type="submit"
+              id="own_delivery_service_button"
+              style="
+                position: relative; top: 25px;
+                background: linear-gradient(
+                  -131deg,
+                  #123c4e,
+                  rgb(111, 111, 111)
+                );
+                border-style: none;
+                width: 220px;
+              "
+            >
+              I own delivery service
+            </button>
+            <button
+              class="btn btn-primary btn-block text-white btn-user"
+              id="need_delivery_service_button"
+              type="submit"
+              style="position: relative; left: 250px; top: -25px;
+                background: linear-gradient(
+                  -131deg,
+                  #123c4e,
+                  rgb(111, 111, 111)
+                );
+                border-style: none;
+                width: 220px;
+              "
+            >
+              I need delivery service
+            </button>
+            <hr />
+          </form>
+
+
+          <form class="user" id="own_delivery_service_form" style="display: none; position: relative; margin-top: 8%;">
+            <div class="form-group" style="width: 280px; position:relative; left: 20%;">
+                <input
+                  class="form-control form-control-user"
+                  type="text"
+                  id="company_name"
+                  placeholder="Company Name"
+                  name="company_name"
+                />
+                <div class="validationIconPosition" id="firstNameIcon">
+                  <!-- <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i> -->
+                </div>
+                <div class="validationSmallText">
+                  <small>Error message</small>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="position: relative; left: 20%; width: 280px;">
+              <input
+                class="form-control form-control-user"
+                type="number"
+                id="oib"
+                placeholder="OIB"
+                name="OIB"
+              />
+              <div class="validationIconPosition" id="lastNameIcon">
+                <!-- <i class="fas fa-check-circle"></i> -->
+                <!-- <i class="fas fa-exclamation-circle"></i> -->
+              </div>
+              <div class="validationSmallText">
+                <small>Error message</small>
+              </div>
+            </div>
+
+
+            <div class="form-group" style="position: relative; left:20%; width: 280px;">
+              
+                <input
+                  class="form-control form-control-user"
+                  type="text"
+                  id="address"
+                  placeholder="Address"
+                  name="address"
+                />
+                <div class="validationIconPosition" id="passwordIcon">
+                  <!-- <i class="fas fa-check-circle"></i> -->
+                  <!-- <i class="fas fa-exclamation-circle"></i> -->
+                </div>
+                <div class="validationSmallText">
+                  <small>Error message</small>
+                </div>
+          
+            </div>
+
+            <div>
+              <label class="container"  style="position:relative; left: 28%;">
+                <input type="checkbox" id="checkbox">
+                <span class="checkmark" style="font-size: small;">Allow collecting data</span>
+                <div class="validationSmallText" style="position: absolute; left: 1%">
+                  <small>Error message</small>
+                </div>
+              </label>
+
+              
+            </div>
+
+            <hr />
+            <button
+              class="btn btn-primary btn-block text-white btn-user"
+              id="button_continue_own"
+              type="submit"
+              style="
+                width: 100px;
+                position: relative;
+                left: 39%;
+                background: linear-gradient(
+                  -131deg,
+                  #123c4e,
+                  rgb(111, 111, 111)
+                );
+                border-style: none;
+              "
+            >
+              Continue
+            </button>
+            
+          </form>
+           
+      
+
+
+          <form class="user" id="need_delivery_service_form" style="display: none; position: relative; margin-top: 8%;">
+            <div class="form-group" style="width: 280px; position:relative; left: 20%;">
+
+                  <select class="bg-light form-control border-0 small" 
+                          style="border-radius: 20px; height: 44px;"
+                          id="select_company"
+                          placeholder="Select delivery company"
+                          >
+                          <option value="" disabled selected hidden>Select delivery company</option>
+                    <option value="amazon">Amazon</option>
+                    <option value="uber">Uber</option>
+                    
+                  </select>
+
+
+                <div class="validationIconPosition" id="firstNameIconDest">
+                  <!-- <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i> -->
+                </div>
+                <div class="validationSmallText">
+                  <small>Error message</small>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="position: relative; left: 20%; width: 280px;">
+              <input
+                class="form-control form-control-user"
+                type="text"
+                id="destination_location"
+                placeholder="Destination location"
+                name="destination_location"
+              />
+              <div class="validationIconPosition" id="lastNameIconDest">
+                <!-- <i class="fas fa-check-circle"></i> -->
+                <!-- <i class="fas fa-exclamation-circle"></i> -->
+              </div>
+              <div class="validationSmallText">
+                <small>Error message</small>
+              </div>
+            </div>
+
+
+            <div class="form-group" style="position: relative; left:20%; width: 280px;">
+              
+                <input
+                  class="form-control form-control-user"
+                  type="text"
+                  id="origin_location"
+                  placeholder="Origin location"
+                  name="origin_location"
+                />
+                <div class="validationIconPosition" id="passwordIconOrig">
+                  <!-- <i class="fas fa-check-circle"></i> -->
+                  <!-- <i class="fas fa-exclamation-circle"></i> -->
+                </div>
+                <div class="validationSmallText">
+                  <small>Error message</small>
+                </div>
+          
+                <div>
+                  <label class="container"  style="position:relative; margin-top: 18px; left: 15%;">
+                    <input type="checkbox" id="checkbox_need">
+                    <span class="checkmark" style="font-size: small;">Allow collecting data</span>
+                    <div class="validationSmallText" style="position: absolute; left: 1%">
+                      <small>Error message</small>
+                    </div>
+                  </label>
+                </div>
+
+
+            </div>
+
+            <hr />
+            <button
+              class="btn btn-primary btn-block text-white btn-user"
+              id="button_continue_need"
+              type="submit"
+              style="
+                width: 100px;
+                position: relative;
+                left: 39%;
+                background: linear-gradient(
+                  -131deg,
+                  #123c4e,
+                  rgb(111, 111, 111)
+                );
+                border-style: none;
+              "
+            >
+              Continue
+            </button>
+            
+          </form>
+
+      </div>
+
+  </div>
+  
+
+    <div class="overlay" id="wrapper">
+      <nav
+        class="navbar navbar-dark flex-grow-1 flex-shrink-1 align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0"
+        style="margin: 0px; padding: 0px; background: linear-gradient(black, rgb(18, 60, 78) 0%, rgb(0, 0, 0) 100%), rgb(18, 60, 78)"
+      >
+        <div class="container-fluid d-flex flex-column p-0">
+          <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="/new-order.html">
+            <div class="sidebar-brand-icon rotate-n-15">
+              <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <div class="sidebar-brand-text mx-3">
+              <span style="font-size: 22px">Geo Path</span>
+            </div>
+          </a>
+          <hr class="sidebar-divider my-0" />
+          <ul class="nav navbar-nav text-light" id="accordionSidebar">
+            <li class="nav-item">
+              <a class="nav-link text-center" href="/new-order.html" style="font-size: 16px; margin-left: 0px"
+              ><i class="fa fa-plus" style="width: 16px; height: 13px"></i>New order</a>
+              <a class="nav-link text-center" href="/my-orders.html" style="font-size: 16px; margin-left: 0px"
+               ><i class="fas fa-mail-bulk" style="width: 20px; height: 10px"></i>My orders</a>
+               <a class="nav-link text-center" href="/profile.html" style="font-size: 16px"
+              >&nbsp;<i class="fas fa-user" style="margin-left: -9px; height: 13px; width: 26px"></i><span>Profile</span></a>
+            </li>
+            <li class="nav-item" id="driver-tools" style="display: none;">
+              <hr id="hr-driver" style="display: block; width: 170px; background-color: rgb(241, 241, 241);">
+              <a class="nav-link text-center" href="/next-route.html" style="font-size: 16px; margin-left: 0px"
+                ><i class="fas fa-location-arrow" style="width: 16px; height: 13px"></i>Next route</a>
+              <a class="nav-link text-center" href="/route-list.html" style="font-size: 16px; text-align: center; margin-left: 0px"
+                ><i class="fas fa-list-ol" style="width: 26px; margin-left: -5px"></i>Route list</a>
+            </li>
+            
+            <li class="nav-item" id="moderator-tools" style="display: none;">
+              <hr id="hr-mod" style="display: block; width: 170px; background-color: rgb(241, 241, 241);">
+              <a class="nav-link text-center active" href="/create-route.html" style="font-size: 16px; text-align: center; margin-left: 0px"
+                ><i class="fas fa-location-arrow" style="width: 26px; margin-left: -5px"></i>Create route</a>
+                <a class="nav-link text-center" href="/manage-routes.html" style="font-size: 16px; text-align: center; margin-left: 0px"
+                ><i class="fas fa-route" style="width: 26px; margin-left: -5px"></i>Manage routes</a>
+              <a class="nav-link text-center" href="/edit-drivers.html" style="font-size: 16px"
+                ><i class="fas fa-user-edit" style="height: 13px; width: 21px"></i><span>Edit drivers</span></a>
+              <a class="nav-link text-center" href="/drivers-list.html" style="font-size: 16px"
+                ><i class="fas fa-truck" style="height: 13px; width: 26px"></i><span>Drivers list</span></a>
+                <a class="nav-link text-center" href="/order-list.html" style="font-size: 16px"
+                ><i class="fas fa-list-ul" style="height: 13px; width: 26px"></i><span>Order list</span></a>
+                <a class="nav-link text-center" href="/categories.html" style="font-size: 16px"
+              ><i class="fab fa-buffer" style="height: 13px; width: 26px"></i><span>Categories</span></a>
+              <a class="nav-link text-center" href="/places.html"style="font-size: 16px;text-align: center;margin-left: 0;height: 56px;"
+                ><i class="fas fa-store-alt" style="width: 26px; margin-bottom: 4px"></i>Places<br /><br /></a>
+              <a class="nav-link text-center" href="/report.html" style="font-size: 16px"
+                ><i class="fas fa-folder-open" style="height: 13px; width: 26px"></i><span>Report</span></a>
+            </li>
+            <li class="nav-item" id="admin-tools" style="display: none;">
+              <hr id="hr-admin" style="display: block; width: 170px; background-color: rgb(241, 241, 241);">
+              <a class="nav-link text-center" href="/userlist.html" style="font-size: 16px"
+                ><i class="fas fa-search" style="height: 13px; width: 26px"></i><span>User List</span></a
+              ><a class="nav-link text-center" href="/manager.html" style="font-size: 16px"
+                ><i class="fa fa-users" style="height: 13px; width: 26px"></i><span>Manager</span></a>
+                <a class="nav-link text-center" href="/overview.html" style="font-size: 16px"
+                ><i class="fas fa-globe-europe" style="height: 13px; width: 26px"></i><span>Overview</span></a>
+                <a class="nav-link text-center" href="/log.html" style="font-size: 16px"
+                  ><i class="fab fa-buffer" style="height: 13px; width: 26px"></i><span>Log</span></a>
+            </li>
+            
+          </ul>
+          <div class="text-center d-none d-md-inline" style="position: relative; margin-top: 10%;">
+            <button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button>
+          </div>
+        </div>
+      </nav>
+      <div class="d-flex flex-column" id="content-wrapper">
+
+
+
+        <div id="minimize-height" style="
+        position: absolute; 
+        z-index: 10; 
+        top:80px; 
+        right: 65px; 
+        width: 320px;
+
+        min-height: 190px;
+        background-color: grey;
+        opacity: 0.85;
+        border-radius: 35px;
+        
+        ">
+        <form>
+
+          <div class="card-header py-3" style="text-align: center; border-radius: 35px;">
+            <p
+              class="m-0 font-weight-bold"
+              style="
+              color: rgb(30, 96, 125);
+              position: relative;
+              left: 12px;"
+            >
+              Create Route
+              <a id="create-route-minimize" style="position: relative; top: -5px; left: 70px;" href="#">
+                <i class="far fa-window-minimize" style="height: 13px; width: 26px; color: rgb(30, 96, 125);"></i></a>    
+            </p>
+            
+          </div>
+
+          <div id="minimize-visibility" style="display: inline;">
+          
+                    
+                    <select class="bg-light form-control border-0 small" 
+                    style="position: relative;margin-top: 15px; margin-left: 25px;border-radius: 20px;width: 270px; height: 40px; text-align: center; text-align-last: center;"
+                    id="route_color"
+                    placeholder="Select color of route"
+                    >
+                    <option value="" disabled selected hidden>Select color of route</option>
+              
+                      <option value="blue">Blue</option>
+                      <option value="red">Red</option>
+                      <option value="green">Green</option>
+                      <option value="yellow">Yellow</option>
+                      <option value="white">White</option>
+                      <option value="orange">Orange</option>
+                      <option value="grey">Grey</option>
+                      <option value="purple">Purple</option>
+                      <option value="pink">Pink</option>
+
+                      
+                    </select>  
+
+                    <div id="form_location_input"></div>
+
+                    <a id="add-waypoint" style="position: relative; top: 15px; margin-left: 115px;" href="#">
+                      <i class="fas fa-plus fa-2x" style="position: relative; height: 50px; width: 26px; color: white;"></i></a>
+  
+                    <a id="remove-waypoint" style="position: relative; top: 15px; margin-left: 40px;" href="#">
+                      <i class="fas fa-minus fa-2x" style="position: relative; height: 50px; width: 26px; color: white;"></i></a>
+
+                    <hr style="width:300px; background-color: white; color:white">
+                    <button
+                      class="btn btn-primary btn-block text-white btn-user"
+                      id="create_route_button"
+                      type="submit"
+                      style="
+                        width: 100px;
+                        position: relative;
+                        margin-bottom: 15px;
+                        
+                        margin-left: 110px;
+                        background: linear-gradient(
+                          -131deg,
+                          #123c4e,
+                          rgb(111, 111, 111)
+                        );
+                        border-style: none;
+                        border-radius: 30px;
+                      "
+                    >
+                      Create
+                    </button> 
+
+
+          </div>     
+
+          
+        </form>
+        </div>
+
+
+        <div id="minimize-height-assign-route" style="
+        position: absolute; 
+        z-index: 10; 
+        top:80px; 
+        right: 400px; 
+        width: 220px;
+        min-height: 350px;
+        background-color: grey;
+        opacity: 0.85;
+        border-radius: 35px;
+        display: none;
+        ">
+
+        <form>
+
+          <div class="card-header py-3" style="text-align: center; border-radius: 35px;">
+            <p
+              class="m-0 font-weight-bold"
+              style="
+              color: rgb(30, 96, 125);
+              position: relative;
+              left: 12px;"
+            >
+              Assign Route
+              <a id="assign-route-minimize" style="position: relative; top: -5px; left: 17px;" href="#">
+                <i class="far fa-window-minimize" style="height: 13px; width: 26px; color: rgb(30, 96, 125);"></i></a>    
+            </p> 
+          </div>
+
+          <div id="minimize-visibility-assign" style="display: inline;">
+
+            <div style="position: relative; margin-left: 25px; margin-top: 15px; width: 170px">
+              <select class="bg-light form-control border-0 small" 
+                                          style="border-radius: 20px; height: 40px; text-align: center; text-align-last: center;"
+                                          id="select_driver"
+                                          placeholder="Select driver"
+                                          >
+                                          <option value="" disabled selected hidden>Select driver</option> 
+                                  </select>
+                                </div>  
+          
+            
+            <input style="position: relative; margin-left: 25px; margin-top: 15px; width: 170px; height: 40px; border-radius: 20px; text-align: center;"
+                              class="form-control form-control-user"
+                              type="text"
+                              id="distance-input"
+                              placeholder="Distance"
+                              name="Distance"
+                            /> 
+                          
+
+            
+            <input style="position: relative; margin-left: 25px; margin-top: 15px; width: 170px; height: 40px; border-radius: 20px; text-align: center;"
+                                              class="form-control form-control-user"
+                                              type="text"
+                                              id="time-duration-input"
+                                              placeholder="Time duration"
+                                              name="Distance"
+                                            /> 
+            
+
+            
+            <input class="form-control form-control-user" 
+                        style="position: relative; margin-left: 25px; margin-top: 15px; width: 170px; height: 40px; border-radius: 20px; "
+                                type="date" value=""
+                                id="date-input">
+
+            <input class="form-control form-control-user" 
+            style="position: relative; margin-left: 25px; margin-top: 15px; width: 170px; height: 40px; border-radius: 20px; "
+            type="time" id="appt" name="appt">
+
+            <hr style="width:200px; background-color: white; color:white">
+                    <button
+                      class="btn btn-primary btn-block text-white btn-user"
+                      id="assign_route_button"
+                      type="submit"
+                      style="
+                        width: 100px;
+                        position: relative;
+                        margin-bottom: 15px;
+                        
+                        margin-left: 60px;
+                        background: linear-gradient(
+                          -131deg,
+                          #123c4e,
+                          rgb(111, 111, 111)
+                        );
+                        border-style: none;
+                        border-radius: 30px;
+                      "
+                    >
+                      Assign
+                    </button> 
+           
+
+          </div>                   
+
+          </form>
+        </div>
+
+
+
+
+
+
+        <div id="content" style="height: 70px; background: linear-gradient(rgb(176, 176, 176), white)">
+          <nav
+            class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top"
+            style="background: linear-gradient(91deg, rgb(86, 86, 86) 0%, rgb(18, 60, 78) 100%)"
+          >
+            <div class="container-fluid">
+              <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button">
+                <i class="fas fa-bars"></i>
+              </button>
+              <form class="form-inline d-none float-right d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="width: 310px">
+                <div class="input-group">
+                  <input class="bg-light form-control border-0 small" id="search-address-input" type="text" placeholder="Find location by address ..." />
+                  <div class="input-group-append">
+                    <button class="btn btn-primary py-0" id="search-address-button" type="submit" style="background: rgb(18, 60, 78); border-color: rgb(255, 255, 255)">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <form class="form-inline d-none float-right d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="width: 310px">
+                <div class="input-group" id="search-form">
+                  <input class="bg-light form-control border-0 small" id="search-coords-input" type="text" placeholder="Find location with coordinates ..." />
+                  <div class="input-group-append">
+                    <button class="btn btn-primary py-0" id="search-coords-button" type="submit" style="background: rgb(18, 60, 78); border-color: rgb(255, 255, 255)">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <ul class="nav navbar-nav flex-nowrap ml-auto">
+
+                <div>    
+                  <li class="nav-item">
+                    <a class="nav-link text-center" id="weather-a" href="">
+                     
+                     <p class="nav-link text-center" id="p-1" style="position: relative; margin-top: 18px;">4.8°C</p>
+                     <i class="fas fa-sun" id="weather-i"></i>
+                     <p class="nav-link text-center" id="p-2" style="position: relative; margin-top: 18px;">Dubrava, HR</p>
+                    </a>   
+                  </li> 
+              </div>
+              
+                <div class="d-none d-sm-block topbar-divider" style="background: #949494"></div>
+                <li class="nav-item dropdown no-arrow">
+                  <div class="nav-item dropdown no-arrow">
+                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(136, 136, 136)"
+                      ><span id="username" class="mr-2 text-gray-600 small" style="font-size: 16px; color: #8d8d8d">User</span
+                      ><i class="material-icons" style="color: rgb(133, 135, 150)">arrow_drop_down</i></a
+                    >
+                    <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in">
+                      <a class="dropdown-item" id="profile-page-dropdown" href="#"
+                        ><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a
+                      >
+
+                      <a class="dropdown-item" id="theme-change" href="">
+                        <div class="custom-control custom-switch" style="position: relative; right: 10px;">
+                          <input class="custom-control-input" type="checkbox" checked="" id="formCheck-1"/>
+                          <label class="custom-control-label" for="formCheck-1">
+                            <p style="height: 5px; position: relative; top: 2px;">Theme</p>
+                          </label>
+                        </div>
+                        </a>
+
+
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" id="logout-dropdown" href="#"
+                        ><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a
+                      >
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </nav>
+
+      
+        </div>
+
+
+        <div id="map"></div>
+        <!-- <footer class="bg-white sticky-footer">
+          <div class="container my-auto">
+            <div class="text-center my-auto copyright">
+              <span>Geo Path | Vladimir Turković 2021</span>
+            </div>
+          </div>
+        </footer> -->
+      <!-- </div>
+      <a class="border rounded d-inline scroll-to-top" href="#page-top" style="background: rgba(90, 92, 105, 0.5)"><i class="fas fa-angle-up"></i></a>
+    </div> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="/assets/js/script.min.js"></script>
+
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbgdH58GXlcf1okyPk7AM3KT7kyRXP05o&map_ids=38e675fd49796839&libraries=places&callback=initialize&v=weekly"
+    ></script>
+    <script src="/scripts/exports/functions.js"></script>
+    <script src="/scripts/create-route.js"></script>
+  </body>
+</html>
