@@ -323,8 +323,8 @@ function loadUserStats(){
           lostLoginTime = dataRole[dataRole.length-1].createdAt.slice(11,19)
           lastLoginDate = dataRole[dataRole.length-1].createdAt.slice(0,10)
         }else {
-          lostLoginTime = ""
-          lastLoginDate = ""
+          lostLoginTime = " "
+          lastLoginDate = " "
         }
         document.getElementById("last_login").value = lastLoginDate + " " + lostLoginTime
 
