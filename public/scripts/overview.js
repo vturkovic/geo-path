@@ -317,10 +317,18 @@ function loadUserStats(){
       .then(result => {
         let dataRole = JSON.parse(result)
 
-        let lostLoginTime = dataRole[dataRole.length-1].createdAt.slice(11,19)
-        let lastLoginDate = dataRole[dataRole.length-1].createdAt.slice(0,10)
-  
+        let lostLoginTime
+        let lastLoginDate
+        if(dataRole[dataRole.length-1].createdAt){
+          lostLoginTime = dataRole[dataRole.length-1].createdAt.slice(11,19)
+          lastLoginDate = dataRole[dataRole.length-1].createdAt.slice(0,10)
+        }else {
+          lostLoginTime = ""
+          lastLoginDate = ""
+        }
         document.getElementById("last_login").value = lastLoginDate + " " + lostLoginTime
+
+        
       })
       .catch(error => console.log('error', error));
     }
